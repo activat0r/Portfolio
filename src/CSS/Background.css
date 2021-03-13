@@ -1,0 +1,125 @@
+
+
+.wrapper{
+    overflow: hidden;
+}
+
+.background{
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+
+@keyframes background-animate {
+    from{
+        transform: rotate(0deg);
+    }
+    0% {
+        background-color: #7E57C2;
+    border-radius: 70% 30% 44% 56% / 39% 30% 70% 61% ;
+    }
+    50% {
+        transform: scale(0.5) rotate(180deg);
+        background-color: #4da0f3;
+        border-radius: 30% 70% 33% 67% / 32% 38% 62% 68%  ;    
+    }
+    100%{
+        background-color: #7E57C2;
+        border-radius: 70% 30% 44% 56% / 39% 30% 70% 61% ;
+    }
+    to{
+        transform: rotate(360deg);
+    }
+  }
+
+
+
+  
+@keyframes background-animate2 {
+    from{
+        transform: rotate(0deg);
+    }
+    0% {
+        background-color: #7E57C2;
+    border-radius: 70% 30% 44% 56% / 39% 30% 70% 61% ;
+    }
+    50% {
+        background-color: #1976D2;
+        transform: scale(2) rotate(180deg);
+        border-radius: 30% 70% 33% 67% / 32% 38% 62% 68%  ;    
+    }
+    100%{
+        background-color: #7E57C2;
+        border-radius: 70% 30% 44% 56% / 39% 30% 70% 61% ;
+    }
+    to{
+        transform: rotate(360deg);
+    }
+  }
+
+.background::after{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    top: 10%;
+    left: 40%;
+    overflow: hidden;
+    content: "";
+    background-color: #7E57C2;
+    position: absolute;
+    opacity: 0.5;
+    text-align: center;
+    line-height: 100%;
+    z-index: -3;
+    width: 70%;
+    height: 80%;
+    min-height: 500px;
+    min-width: 400px;
+    border-radius: 70% 30% 44% 56% / 39% 30% 70% 61% ;
+   
+    -webkit-animation:infinite;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-name: background-animate2 ;
+
+    animation:infinite;
+    animation-duration: 20s;
+    animation-timing-function:linear;
+    animation-name: background-animate2 ;
+  }
+
+  .background::before{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    border-radius: 70% 30% 44% 56% / 39% 30% 70% 61% ;
+    top: -10%;
+    left: -5%;
+    content: "";
+    overflow: hidden;
+    background-color: #7E57C2;
+    display: inline-block;
+    position: absolute;
+    opacity: 0.5;
+    text-align: center;
+    line-height: 100%;
+    width: 60%;
+    height: 80%;
+    min-height: 500px;
+    min-width: 400px;
+    z-index: -3;
+
+    -webkit-animation:infinite;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-name: background-animate ;
+
+    animation:infinite;
+    animation-duration: 30s;
+    animation-timing-function:linear;
+    animation-name: background-animate ;
+  }
+
+  
+  

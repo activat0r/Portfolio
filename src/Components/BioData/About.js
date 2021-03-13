@@ -2,6 +2,14 @@ import { Typography } from '@material-ui/core'
 import react from 'react'
 import {useState, useEffect} from 'react'
 import '../../CSS/NameTransition.css'
+import '../../CSS/About.css'
+import { makeStyles } from '@material-ui/core/styles';
+
+import AvatarBackground from './AvatarBackground';
+import photo from '../../AdityaSawant.jpg'
+
+import bootstrap from 'bootstrap'
+
 
 var word ="";
 var charCounter = 0;
@@ -10,10 +18,18 @@ const typeCharDelay = 300;
 const newKeywordDelay = 2000;
 const keywords = ["Aditya Sawant","a Developer", "an Engineer"];
 
+const useStyles = makeStyles({
+    typo_root: {
+      margin: "auto"
+    },
+  });
+
 function About(){
+
     const [text, setText] = useState("");   
     const [deleting,setDeleting] = useState(false);
     const [keywordCounter, setKeywordCounter] = useState(0);
+    const styleClass = useStyles();
 
     useEffect(()=>{
         const timer = setTimeout(()=>{
@@ -57,18 +73,22 @@ function About(){
     },[keywordCounter,keywords,charCounter])
 
     return(
-      <div className="center">
-        <Typography variant="h1">
+        <>
+    <div className="aboutWrapper">
+      
+    <div className="avatar-container">
+        <img className="avatar-img" src={photo} alt="Aditya Sawant"/>
+    </div>
+    <div className="intro-container">
+        <Typography variant="h1" className="intro-text" classes={{root: styleClass.typo_root}}>
             Hi!
         </Typography> 
         <br/>
-        <Typography display="inline"  variant="h6">
-            I am &nbsp;</Typography>
-        <Typography display="inline" variant="h6"  id="about_name">
-            {text}
-        </Typography>
-         
+        <Typography  variant="h6" id="about_name" className="intro-typer" classes={{root: styleClass.typo_root}}>
+            I am&nbsp;{text}</Typography>
       </div> 
+    </div>
+    </>
     );
 }
 export default About;

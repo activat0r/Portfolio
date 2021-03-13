@@ -11,18 +11,15 @@
 }
 
 #about_name::after{
-    content: " |";
+    content: "|";
     color: white;
+    position: relative;
+    top: -0.07em;
+    left: .3em;
     animation:blinker infinite;
     animation-duration: 1s;
 }
 
 .white-text{
     text-decoration: white;
-}
-
-.center{
-    position: absolute;
-    top: 40%;
-    margin-left: 50px;
 }

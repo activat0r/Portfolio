@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import WindowDimens from './Hooks/WindowDimens';
 import { Typography } from '@material-ui/core';
 import About from './Components/BioData/About';
+import './CSS/Background.css'
 
 function App() {
   const { height, width } = WindowDimens();
