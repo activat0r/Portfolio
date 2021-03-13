@@ -43,13 +43,13 @@ function Header() {
 
 
     return (
-      <AppBar position="static" >
+      <AppBar position="sticky" >
         <Toolbar>
     <Typography variant="h6" className={classes.title}>
-      Aditya Sawant
+      Portfolio
     </Typography>
     <ConnectButton color="secondary" >Connect</ConnectButton>
-
+    
   </Toolbar>
       </AppBar>
     );

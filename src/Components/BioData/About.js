@@ -1,0 +1,74 @@
+import { Typography } from '@material-ui/core'
+import react from 'react'
+import {useState, useEffect} from 'react'
+import '../../CSS/NameTransition.css'
+
+var word ="";
+var charCounter = 0;
+const eraseCharDelay= 100;
+const typeCharDelay = 300;
+const newKeywordDelay = 2000;
+const keywords = ["Aditya Sawant","a Developer", "an Engineer"];
+
+function About(){
+    const [text, setText] = useState("");   
+    const [deleting,setDeleting] = useState(false);
+    const [keywordCounter, setKeywordCounter] = useState(0);
+
+    useEffect(()=>{
+        const timer = setTimeout(()=>{
+        if(charCounter < keywords[`${keywordCounter}`].length && !deleting){
+            word = (word + keywords[`${keywordCounter}`].charAt(charCounter));
+            setText(word)
+            charCounter++;
+        }
+        
+    },typeCharDelay)
+    return () => window.clearTimeout(timer);
+
+    },[deleting,charCounter,word,keywordCounter,keywords])
+
+    useEffect(()=>{
+        const timer2 = setTimeout(()=>{
+       if(charCounter>0 && deleting){
+            word = (keywords[(`${keywordCounter}`)].substr(0,charCounter-1));
+            setText(word)
+            charCounter--;
+            if(charCounter == 0){
+                setDeleting(false)
+                if(`${keywordCounter}` < keywords.length-1)
+                    setKeywordCounter(prevCount => prevCount + 1)
+                else
+                    setKeywordCounter(0) 
+            }
+        }
+    },eraseCharDelay)
+    return () => window.clearTimeout(timer2);
+    },[deleting,charCounter,word,keywordCounter,keywords])
+
+    useEffect(()=>{
+        const timer3 = setTimeout(()=>{
+            if(charCounter == (keywords[`${keywordCounter}`]).length){
+                setDeleting(true);
+            }
+           
+        },newKeywordDelay)
+        return ()=> window.clearTimeout(timer3);
+    },[keywordCounter,keywords,charCounter])
+
+    return(
+      <div className="center">
+        <Typography variant="h1">
+            Hi!
+        </Typography> 
+        <br/>
+        <Typography display="inline"  variant="h6">
+            I am &nbsp;</Typography>
+        <Typography display="inline" variant="h6"  id="about_name">
+            {text}
+        </Typography>
+         
+      </div> 
+    );
+}
+export default About;
