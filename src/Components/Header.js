@@ -1,4 +1,4 @@
-import React, {useState, Component} from "react";
+import React, {useState, Component, useEffect} from "react";
 import Grid from '@material-ui/core/Grid';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from "@material-ui/core/Toolbar";
@@ -34,8 +34,51 @@ const useStyles = makeStyles((theme) => ({
 function Header() {
 
     const classes = useStyles();
-    const [toggle, setToggle] = useState(true)
-    const handleNavCollapse = () => setToggle(!toggle);
+    const [homeToggle, setHomeToggle] = useState(true)
+    const [projectsToggle, setProjectsToggle] = useState(false)
+    const [experienceToggle, setExperienceToggle] = useState(false)
+    const [blogsToggle, setBlogsToggle] = useState(false)
+
+    const[activeId, setActiveId] = useState(1);
+
+    useEffect(()=>{
+      console.log(activeId)
+      switch (activeId){
+
+        case 1: 
+          setHomeToggle(true)
+          setProjectsToggle(false)
+          setExperienceToggle(false)
+          setBlogsToggle(false)
+
+          break;
+
+        case 2:
+          setHomeToggle(false)
+          setProjectsToggle(true)
+          setExperienceToggle(false)
+          setBlogsToggle(false)
+          break;
+
+        case 3:
+          setHomeToggle(false)
+          setProjectsToggle(false)
+          setExperienceToggle(true)
+          setBlogsToggle(false)
+          break;
+
+
+        case 4:
+          setHomeToggle(false)
+          setProjectsToggle(false)
+          setExperienceToggle(false)
+          setBlogsToggle(true)
+          break;
+      }
+    },[activeId])
+
+
+
 
     return (
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -45,14 +88,20 @@ function Header() {
     </button>
     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+        <li className="nav-item" onClick={()=>setActiveId(1)}>
+          <a className={`${homeToggle ? 'active' : ''} nav-link`} aria-current="page" href="#">About</a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
+        <li className="nav-item" onClick={()=>setActiveId(2)}>
+          <a className={`${projectsToggle ? 'active' : ''} nav-link`} href="#">Projects</a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Disabled</a>
+        <li className="nav-item" onClick={()=>setActiveId(3)}>
+          <a className={`${experienceToggle ? 'active' : ''} nav-link`} href="#">Experience</a>
+        </li>
+        <li className="nav-item" onClick={()=>setActiveId(4)}>
+          <a className={`${blogsToggle ? 'active' : ''} nav-link`} href="#">Blogs</a>
+        </li>
+        <li className="nav-item" onClick={()=>setActiveId(5)}>
+          <a className="nav-link" href="#">Resume</a>
         </li>
       </ul>
     </div>
