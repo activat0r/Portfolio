@@ -7,12 +7,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AvatarBackground from './Components/BioData/AvatarBackground';
+import Background from './Components/Background';
 import './CSS/Background.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <AvatarBackground className="wrapper"></AvatarBackground>
+    <Background className="wrapper"></Background>
     <App />
 
   </React.StrictMode>,

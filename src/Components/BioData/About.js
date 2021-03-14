@@ -5,7 +5,6 @@ import '../../CSS/NameTransition.css'
 import '../../CSS/About.css'
 import { makeStyles } from '@material-ui/core/styles';
 
-import AvatarBackground from './AvatarBackground';
 import photo from '../../AdityaSawant.jpg'
 
 

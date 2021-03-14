@@ -10,7 +10,7 @@ import { Button, ButtonGroup } from "@material-ui/core";
 import { palette } from "@material-ui/system";
 import { green, purple, blue } from '@material-ui/core/colors';
 import "../CSS/Header.css"
-
+import {Link} from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -86,19 +86,31 @@ function Header() {
     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item" onClick={()=>setActiveId(1)}>
-          <a className={`${homeToggle ? 'active' : ''} nav-link`} aria-current="page" href="#">About</a>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/">
+          <a data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" className={`${homeToggle ? 'active' : ''} nav-link`} aria-current="page" href="#">About</a>
+          </Link>
         </li>
         <li className="nav-item" onClick={()=>setActiveId(2)}>
-          <a className={`${projectsToggle ? 'active' : ''} nav-link`} href="#">Projects</a>
+        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/projects">
+          <a data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" className={`${projectsToggle ? 'active' : ''} nav-link`} href="#">Projects</a>
+          </Link>
+
         </li>
         <li className="nav-item" onClick={()=>setActiveId(3)}>
-          <a className={`${experienceToggle ? 'active' : ''} nav-link`} href="#">Experience</a>
+        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/experience">
+          <a data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" className={`${experienceToggle ? 'active' : ''} nav-link`} href="#">Experience</a>
+          </Link>
+
         </li>
         <li className="nav-item" onClick={()=>setActiveId(4)}>
-          <a className={`${blogsToggle ? 'active' : ''} nav-link`} href="#">Blogs</a>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/blogs">
+          <a data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" className={`${blogsToggle ? 'active' : ''} nav-link`} href="#">Blogs</a>
+          </Link>
+
         </li>
         <li className="nav-item" onClick={()=>setActiveId(5)}>
-          <a className="nav-link" href="#">Resume</a>
+          <a className="nav-link pdf-icon" target="_blank" href="https://drive.google.com/file/d/1Bv_CCNKiKlt-C9dBxNloM08tQagwLFKo/view?usp=sharing">Resume</a>
+
         </li>
       </ul>
     </div>

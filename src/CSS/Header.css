@@ -2,3 +2,12 @@
     outline: none;
     box-shadow: none;
   }
+  .pdf-icon::before{
+    display: inline-block;
+    content: '\f1c1';
+    font-family: 'Font Awesome 5 Free';
+    text-decoration: inherit;
+    color:rgb(240, 17, 92);
+    position: relative;
+    bottom: 5px;
+  }

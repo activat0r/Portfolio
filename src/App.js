@@ -3,14 +3,15 @@ import './App.css';
 import Grid from '@material-ui/core/Grid';
 import Header from "./Components/Header"
 import Details from "./Components/Details"
-import { AvatarGroup } from '@material-ui/lab';
-import AvatarBackground from './Components/BioData/AvatarBackground';
 import { useState, useEffect } from 'react';
 import WindowDimens from './Hooks/WindowDimens';
 import { Typography } from '@material-ui/core';
 import About from './Components/BioData/About';
 import './CSS/Background.css'
-
+import {BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
+import Experience from './Components/Experience/Experience';
+import Projects from './Components/Projects/Projects';
+import Blogs from './Components/Blogs/Blogs';
 function App() {
   const { height, width } = WindowDimens();
 
@@ -20,8 +21,17 @@ function App() {
 
   return (
     <>
+    <Router>
       <Header></Header>
-      <About></About>
+      <Switch>
+      <Route exact component={About} path="" />
+      <Route exact component={About} path="/" />
+      <Route exact component={About} path="/about" />
+      <Route exact component={Projects} path="/project" />
+      <Route exact component={Experience} path="/experience" />
+      <Route exact component={Blogs} path="/blogs" />
+      </Switch>
+    </Router>
     </>
   );
 }

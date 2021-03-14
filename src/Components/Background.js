@@ -2,10 +2,10 @@ import { useTheme } from "@material-ui/core";
 import { grey, purple, red } from "@material-ui/core/colors";
 import react,{ Component, useEffect} from "react";
 import ReactDOM from 'react-dom';
-import "../../CSS/Background.css"
+import "../CSS/Background.css"
 import {useState} from 'react'
-import WindowDimens from "../../Hooks/WindowDimens"
-function AvatarBackground(){
+import WindowDimens from "../Hooks/WindowDimens"
+function Background(){
 
     const [winOpcaity, setwinOpcaity] = useState(1);
 
@@ -32,4 +32,4 @@ function AvatarBackground(){
         </>
     );
 }
-export default AvatarBackground;
+export default Background;
