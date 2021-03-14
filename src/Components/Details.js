@@ -9,9 +9,9 @@ import MenuIcon from "@material-ui/icons/Menu"
 import Typography from "@material-ui/core/Typography"
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper } from "@material-ui/core";
-import Experience from "./Experience";
-import Projects from "./Projects";
-import Roles from "./Roles";
+import Experience from "./Experience/Experience";
+import Projects from "./Projects/Projects";
+import Roles from "./Experience/Roles";
 import Sizing from "@material-ui/system/sizing"
 import Box from "@material-ui/core/Box"
 import About from "./BioData/About";

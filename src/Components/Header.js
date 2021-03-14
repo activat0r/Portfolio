@@ -10,8 +10,7 @@ import { Button, ButtonGroup } from "@material-ui/core";
 import { palette } from "@material-ui/system";
 import { green, purple, blue } from '@material-ui/core/colors';
 import "../CSS/Header.css"
-
-
+import {Link} from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -81,25 +80,37 @@ function Header() {
     return (
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div className="container-fluid">
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="true" aria-label="Toggle navigation">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item" onClick={()=>setActiveId(1)}>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/">
           <a className={`${homeToggle ? 'active' : ''} nav-link`} aria-current="page" href="#">About</a>
+          </Link>
         </li>
         <li className="nav-item" onClick={()=>setActiveId(2)}>
+        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/projects">
           <a className={`${projectsToggle ? 'active' : ''} nav-link`} href="#">Projects</a>
+          </Link>
+
         </li>
         <li className="nav-item" onClick={()=>setActiveId(3)}>
+        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/experience">
           <a className={`${experienceToggle ? 'active' : ''} nav-link`} href="#">Experience</a>
+          </Link>
+
         </li>
         <li className="nav-item" onClick={()=>setActiveId(4)}>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/blogs">
           <a className={`${blogsToggle ? 'active' : ''} nav-link`} href="#">Blogs</a>
+          </Link>
+
         </li>
         <li className="nav-item" onClick={()=>setActiveId(5)}>
-          <a className="nav-link" href="#">Resume</a>
+          <a className="nav-link pdf-icon" target="_blank" href="https://drive.google.com/file/d/1Bv_CCNKiKlt-C9dBxNloM08tQagwLFKo/view?usp=sharing">Resume</a>
+
         </li>
       </ul>
     </div>

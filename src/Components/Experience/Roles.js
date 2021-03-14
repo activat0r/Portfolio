@@ -8,7 +8,7 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar"
 import Divider from "@material-ui/core/Divider"
 import PhoneIphoneRoundedIcon from '@material-ui/icons/PhoneIphoneRounded';
 import PhoneAndroidRoundedIcon from '@material-ui/icons/PhoneAndroidRounded';
-import {ReactComponent as ServerIcon} from "./../icons/server.svg"
+import {ReactComponent as ServerIcon} from "./../../icons/server.svg"
 
 const useStyles = makeStyles((theme) => ({
     paper :{
