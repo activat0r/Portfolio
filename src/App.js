@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <About style={{height: "100vh"}}></About>
+      <About></About>
     </>
   );
 }

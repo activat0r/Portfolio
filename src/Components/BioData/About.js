@@ -8,8 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import AvatarBackground from './AvatarBackground';
 import photo from '../../AdityaSawant.jpg'
 
-import bootstrap from 'bootstrap'
-
 
 var word ="";
 var charCounter = 0;
@@ -74,7 +72,7 @@ function About(){
 
     return(
    
-    <div className="aboutWrapper d-flex flex-column bd-highlight mb-3">
+    <div className="aboutWrapper">
       
     <div className="avatar-container">
         <img className="avatar-img" src={photo} alt="Aditya Sawant"/>
