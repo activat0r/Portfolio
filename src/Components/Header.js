@@ -87,24 +87,24 @@ function Header() {
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item" onClick={()=>setActiveId(1)}>
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/">
-          <a data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" className={`${homeToggle ? 'active' : ''} nav-link`} aria-current="page" href="#">About</a>
+          <a className={`${homeToggle ? 'active' : ''} nav-link`} aria-current="page" href="#">About</a>
           </Link>
         </li>
         <li className="nav-item" onClick={()=>setActiveId(2)}>
         <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/projects">
-          <a data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" className={`${projectsToggle ? 'active' : ''} nav-link`} href="#">Projects</a>
+          <a className={`${projectsToggle ? 'active' : ''} nav-link`} href="#">Projects</a>
           </Link>
 
         </li>
         <li className="nav-item" onClick={()=>setActiveId(3)}>
         <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/experience">
-          <a data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" className={`${experienceToggle ? 'active' : ''} nav-link`} href="#">Experience</a>
+          <a className={`${experienceToggle ? 'active' : ''} nav-link`} href="#">Experience</a>
           </Link>
 
         </li>
         <li className="nav-item" onClick={()=>setActiveId(4)}>
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/blogs">
-          <a data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" className={`${blogsToggle ? 'active' : ''} nav-link`} href="#">Blogs</a>
+          <a className={`${blogsToggle ? 'active' : ''} nav-link`} href="#">Blogs</a>
           </Link>
 
         </li>
