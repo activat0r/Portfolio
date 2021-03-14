@@ -79,7 +79,7 @@ function Header() {
 
 
     return (
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div className="container-fluid">
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="true" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

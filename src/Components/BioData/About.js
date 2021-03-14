@@ -73,22 +73,22 @@ function About(){
     },[keywordCounter,keywords,charCounter])
 
     return(
-        <>
-    <div className="aboutWrapper">
+   
+    <div className="aboutWrapper d-flex flex-column bd-highlight mb-3">
       
     <div className="avatar-container">
         <img className="avatar-img" src={photo} alt="Aditya Sawant"/>
     </div>
     <div className="intro-container">
-        <Typography variant="h1" className="intro-text" classes={{root: styleClass.typo_root}}>
+        <h1 className="intro-text">
             Hi!
-        </Typography> 
+        </h1> 
         <br/>
-        <Typography  variant="h6" id="about_name" className="intro-typer" classes={{root: styleClass.typo_root}}>
-            I am&nbsp;{text}</Typography>
+        <h4 id="about_name" className="intro-typer" >
+            I am&nbsp;{text}</h4>
       </div> 
     </div>
-    </>
+
     );
 }
 export default About;

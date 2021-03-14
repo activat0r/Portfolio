@@ -13,7 +13,7 @@ import './CSS/Background.css'
 ReactDOM.render(
   <React.StrictMode>
     <AvatarBackground className="wrapper"></AvatarBackground>
-    <App/>
+    <App className="full-viewport" style={{height: "100vh"}}/>
 
   </React.StrictMode>,
   document.getElementById('root')
