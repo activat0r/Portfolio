@@ -40,7 +40,7 @@ return (
     
     <TimelineItem>
       <TimelineOppositeContent>
-        <Typography variant="body2" color = "textPrimary">(2018 - Present)</Typography>
+        <Typography variant="body2"  style={{color:"#fff"}}>(2018 - Present)</Typography>
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot color="primary"/>
@@ -58,7 +58,7 @@ return (
 
     <TimelineItem>
     <TimelineOppositeContent>
-        <Typography variant="body2" color = "textSecondary">(2018)</Typography>
+        <Typography variant="body2" style={{color:"#fff"}}>(2018)</Typography>
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot />
@@ -77,7 +77,7 @@ return (
 
     <TimelineItem>
     <TimelineOppositeContent>
-        <Typography variant="body2" color = "textSecondary">(2014)</Typography>
+        <Typography variant="body2"  style={{color:"#fff"}}>(2014)</Typography>
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot />
@@ -97,7 +97,7 @@ return (
 
     <TimelineItem>
     <TimelineOppositeContent>
-        <Typography variant="body2" color = "textSecondary">(2012)</Typography>
+        <Typography variant="body2"  style={{color:"#fff"}}>(2012)</Typography>
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot />

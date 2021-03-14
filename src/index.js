@@ -1,12 +1,20 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min'
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import AvatarBackground from './Components/BioData/AvatarBackground';
+import './CSS/Background.css'
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AvatarBackground className="wrapper"></AvatarBackground>
+    <App className="full-viewport" style={{height: "100vh"}}/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

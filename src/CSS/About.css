@@ -1,0 +1,44 @@
+.avatar-img{
+    height: 150px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    object-position: 100% 5%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 5px #888888;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-in-out;
+    -webkit-transition: box-shadow 0.3s ease-in-out;;
+}
+
+.avatar-container{
+    width: 100%;
+    display: grid;
+    margin-top: 75px;
+}
+
+.intro-container{
+    margin-top: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+}
+
+.intro-typer{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: ;
+}
+.intro-text{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-wrapper{
+    height: "auto";
+    width: "auto";
+
+}

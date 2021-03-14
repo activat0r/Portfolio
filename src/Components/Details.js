@@ -14,14 +14,14 @@ import Projects from "./Projects";
 import Roles from "./Roles";
 import Sizing from "@material-ui/system/sizing"
 import Box from "@material-ui/core/Box"
+import About from "./BioData/About";
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
       display:"flex",
       alignItems:"center",
       justifyContent:"center",
-      backgroundColor: "#fff",
-      paddingBottom: "2rem"
+      paddingBottom: "2rem",
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -37,8 +37,9 @@ const useStyles = makeStyles((theme) => ({
 
       },
       roles:{
-
-      }
+        
+      },
+   
   }));
 
 function Details() {
@@ -48,7 +49,7 @@ function Details() {
 
     return (
       <Container className={classes.root} >
-      <Grid container direction="column" spacing={3} pa>
+      <Grid container direction="column" spacing={3}>
         <Grid item  className={classes.experience}><Experience></Experience></Grid>
         <Grid item className={classes.projects}><Projects></Projects></Grid>
         <Grid item className={classes.roles}><Roles></Roles></Grid>
