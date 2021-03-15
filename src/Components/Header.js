@@ -11,6 +11,7 @@ import { palette } from "@material-ui/system";
 import { green, purple, blue } from '@material-ui/core/colors';
 import "../CSS/Header.css"
 import {Link} from 'react-router-dom'
+import { act } from "react-dom/test-utils";
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -33,15 +34,22 @@ const useStyles = makeStyles((theme) => ({
 function Header() {
 
     const classes = useStyles();
-    const [homeToggle, setHomeToggle] = useState(true)
+    const [homeToggle, setHomeToggle] = useState(false)
     const [projectsToggle, setProjectsToggle] = useState(false)
     const [experienceToggle, setExperienceToggle] = useState(false)
     const [blogsToggle, setBlogsToggle] = useState(false)
-
     const[activeId, setActiveId] = useState(1);
 
     useEffect(()=>{
-      console.log(activeId)
+      const persistTab = localStorage.getItem("activeTab")
+      if(persistTab){
+        setActiveId(parseInt(persistTab))
+      }
+
+    },[])
+
+    useEffect(()=>{
+      localStorage.setItem("activeTab", activeId)
       switch (activeId){
 
         case 1: 
