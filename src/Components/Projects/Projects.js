@@ -5,6 +5,7 @@ import CardHeader from "@material-ui/core/CardHeader"
 import Typography from "@material-ui/core/Typography";
 import CardContent  from "@material-ui/core/CardContent";
 import './../../CSS/Projects.css'
+import { bottom } from "@popperjs/core";
 
 function Projects(){
 
@@ -36,18 +37,24 @@ function Projects(){
       } else {
         return (
             <div className="container">
-          <ul>
+            <div className="row ">
+          
             {data.map(data => (
-              <li key={data.id}><a className = "link-style" style={{wordWrap: "break-word", textDecoration:"none"}} target="_blank" href={data.html_url}>
-                  {data.name}<br/>
-                  {data.html_url}<br/>
-                  {data.description} <br/>
-                  {data.owner.login} 
-                </a>
-                <hr/>
-              </li>
+            <div key={data.id} className="col-sm-12 col-md-4 col-lg-3 justify-content-center" style={{ paddingTop:"12px"}}>
+             
+              <div className="card" style={{color: "black"}}>
+                <img src="..." className="card-img-top" alt="..."/>
+                <div className="card-body">
+                  <h5 className="card-title" >Card title</h5>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" className="btn btn-primary">Go somewhere</a>
+                </div>
+                </div>
+            </div>
+
             ))}
-          </ul>
+         
+          </div>
           </div>
         );
       }

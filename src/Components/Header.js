@@ -34,10 +34,7 @@ const useStyles = makeStyles((theme) => ({
 function Header() {
 
     const classes = useStyles();
-    const [homeToggle, setHomeToggle] = useState(false)
-    const [projectsToggle, setProjectsToggle] = useState(false)
-    const [experienceToggle, setExperienceToggle] = useState(false)
-    const [blogsToggle, setBlogsToggle] = useState(false)
+  
     const[activeId, setActiveId] = useState(1);
 
     useEffect(()=>{
@@ -50,38 +47,6 @@ function Header() {
 
     useEffect(()=>{
       localStorage.setItem("activeTab", activeId)
-      switch (activeId){
-
-        case 1: 
-          setHomeToggle(true)
-          setProjectsToggle(false)
-          setExperienceToggle(false)
-          setBlogsToggle(false)
-
-          break;
-
-        case 2:
-          setHomeToggle(false)
-          setProjectsToggle(true)
-          setExperienceToggle(false)
-          setBlogsToggle(false)
-          break;
-
-        case 3:
-          setHomeToggle(false)
-          setProjectsToggle(false)
-          setExperienceToggle(true)
-          setBlogsToggle(false)
-          break;
-
-
-        case 4:
-          setHomeToggle(false)
-          setProjectsToggle(false)
-          setExperienceToggle(false)
-          setBlogsToggle(true)
-          break;
-      }
     },[activeId])
 
 
