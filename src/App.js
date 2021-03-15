@@ -24,10 +24,9 @@ function App() {
     <Router>
       <Header></Header>
       <Switch>
-      <Route exact component={About} path="" />
       <Route exact component={About} path="/" />
       <Route exact component={About} path="/about" />
-      <Route exact component={Projects} path="/project" />
+      <Route exact component={Projects} path="/projects" />
       <Route exact component={Experience} path="/experience" />
       <Route exact component={Blogs} path="/blogs" />
       </Switch>
