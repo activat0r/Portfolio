@@ -38,7 +38,7 @@ function Projects(){
           <ul>
             {data.map(data => (
               <li key={data.id}>
-                {data.name} <br/>{data.description} <br/>{data.owner.login} <br/><a target="_blank" href={data.html_url}>{data.html_url} </a>
+                {data.name} <br/>{data.description} <br/>{data.owner.login} <br/><a style={{wordWrap: "break-word"}} target="_blank" href={data.html_url}>{data.html_url} </a>
                 <hr/>
               </li>
             ))}

@@ -4,7 +4,7 @@
 
 .background{
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     z-index: -1;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -86,7 +86,7 @@
     overflow: hidden;
     content: "";
     background-color: #7E57C2;
-    position: absolute;
+    position: fixed;
     opacity: 0.5;
     text-align: center;
     line-height: 100%;
@@ -125,7 +125,7 @@
     overflow: hidden;
     background-color: #7E57C2;
     display: inline-block;
-    position: absolute;
+    position: fixed;
     opacity: 0.5;
     text-align: center;
     line-height: 100%;
