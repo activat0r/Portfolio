@@ -10,7 +10,7 @@ import { Button, ButtonGroup } from "@material-ui/core";
 import { palette } from "@material-ui/system";
 import { green, purple, blue } from '@material-ui/core/colors';
 import "../CSS/Header.css"
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import { act } from "react-dom/test-utils";
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -94,26 +94,26 @@ function Header() {
     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item" onClick={()=>setActiveId(1)}>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/">
-          <a className={`${homeToggle ? 'active' : ''} nav-link`} aria-current="page" href="#">About</a>
-          </Link>
+          <NavLink exact activeClassName="active" className="nav-link" to="/">
+          About
+          </NavLink>
         </li>
         <li className="nav-item" onClick={()=>setActiveId(2)}>
-        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/projects">
-          <a className={`${projectsToggle ? 'active' : ''} nav-link`} href="#">Projects</a>
-          </Link>
+        <NavLink exact activeClassName="active" className="nav-link" to="/projects">
+          Projects
+          </NavLink>
 
         </li>
         <li className="nav-item" onClick={()=>setActiveId(3)}>
-        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/experience">
-          <a className={`${experienceToggle ? 'active' : ''} nav-link`} href="#">Experience</a>
-          </Link>
+        <NavLink exact  activeClassName="active" className="nav-link" to="/experience">
+          Experience
+          </NavLink>
 
         </li>
         <li className="nav-item" onClick={()=>setActiveId(4)}>
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/blogs">
-          <a className={`${blogsToggle ? 'active' : ''} nav-link`} href="#">Blogs</a>
-          </Link>
+          <NavLink exact activeClassName="active" className="nav-link" to="/blogs">
+          Blogs
+          </NavLink>
 
         </li>
         <li className="nav-item" onClick={()=>setActiveId(5)}>

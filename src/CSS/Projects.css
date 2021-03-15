@@ -1,0 +1,9 @@
+.link-style{
+    color: white;
+}
+.link-style:hover{
+    color: rgb(150, 189, 212);
+}
+.link-style:focus{
+    color: rgb(150, 189, 212)
+}

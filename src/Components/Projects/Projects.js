@@ -4,6 +4,7 @@ import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader"
 import Typography from "@material-ui/core/Typography";
 import CardContent  from "@material-ui/core/CardContent";
+import './../../CSS/Projects.css'
 
 function Projects(){
 
@@ -37,8 +38,12 @@ function Projects(){
             <div className="container">
           <ul>
             {data.map(data => (
-              <li key={data.id}>
-                {data.name} <br/>{data.description} <br/>{data.owner.login} <br/><a style={{wordWrap: "break-word"}} target="_blank" href={data.html_url}>{data.html_url} </a>
+              <li key={data.id}><a className = "link-style" style={{wordWrap: "break-word", textDecoration:"none"}} target="_blank" href={data.html_url}>
+                  {data.name}<br/>
+                  {data.html_url}<br/>
+                  {data.description} <br/>
+                  {data.owner.login} 
+                </a>
                 <hr/>
               </li>
             ))}
