@@ -18,7 +18,6 @@
 .project-card-height{
     min-height: 100%;
     color: white;
-    backdrop-filter: blur(80px);
 }
 .project-card-body{
     position: relative;
@@ -31,3 +30,14 @@
     font-weight: 600;
     right: 25px;
 }
+
+.hover-animation:hover .card-hovered:not(:hover){
+    transform: scale(0.95);
+    transition: 0.1s;
+}
+.card-hovered:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+    box-shadow: 0 0 8px #00000044;
+}
+

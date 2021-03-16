@@ -9,16 +9,18 @@ import { bottom } from "@popperjs/core";
 
 
 function ProjectList({projectList}){
+  
   return(    
   <div className="container vertical-align">
-  <div className="row ">
+  <div className="row hover-animation">
 
-  {projectList.map(projectList => (
-  <div key={projectList.id} className="col-sm-12 col-md-4 col-lg-3 justify-content-center" style={{ paddingTop:"12px"}}>
+  {projectList.map(projectList => projectList.fork == false ? (
    
-    <div className="card project-card-height" style={{color: "black"}}>
+  <div key={projectList.id} className="col-sm-12 col-md-4 justify-content-center">
+   
+    <div className="card project-card-height card-hovered " style={{color: "black"}}>
       
-      <div className="card-body project-card-body">
+      <div className="card-body  project-card-body">
         <h5 className="card-title" >{projectList.name}</h5>
         <p className="card-text">{projectList.description}</p>
         <br/>
@@ -27,7 +29,7 @@ function ProjectList({projectList}){
       </div>
   </div>
 
-  ))}
+  ) : "")}
 
 </div>
 </div>
