@@ -16,11 +16,11 @@ function ProjectList({projectList}){
 
   {projectList.map(projectList => projectList.fork == false ? (
    
-  <div key={projectList.id} className="col-sm-12 col-md-4 justify-content-center">
+  <div key={projectList.id} className="col-sm-12 col-md-4 justify-content-center  project-card">
    
-    <div className="card project-card-height card-hovered " style={{color: "black"}}>
+    <div className="card project-card-height card-hovered" style={{color: "black"}}>
       
-      <div className="card-body  project-card-body">
+      <div className="card-body project-card-body">
         <h5 className="card-title" >{projectList.name}</h5>
         <p className="card-text">{projectList.description}</p>
         <br/>
@@ -31,6 +31,7 @@ function ProjectList({projectList}){
 
   ) : "")}
 
+ 
 </div>
 </div>
 )
