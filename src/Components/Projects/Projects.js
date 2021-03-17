@@ -6,8 +6,8 @@ import Typography from "@material-ui/core/Typography";
 import CardContent  from "@material-ui/core/CardContent";
 import './../../CSS/Projects.css'
 import { bottom } from "@popperjs/core";
-
-
+import Error from "../Common/Loading/Error"
+import Wrapper from "./../Common/Loading/Wrapper"
 function ProjectList({projectList}){
   
   return(    
@@ -53,22 +53,21 @@ function Projects(){
           setLoading(false);
           setData(result);
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           setLoading(false);
           setError(error);
         }
       )
     },[])
-    if (error) {
-        return <div>Error</div>;
-      } else if (loading) {
-        return <div>Loading...</div>;
-      } else {
-        return <ProjectList projectList={data}></ProjectList>
-      }
+    // if (error) {
+    //     return <Error errorMessage={error}></Error>;
+    //   } else if (loading) {
+    //     return <div>Loading...</div>;
+    //   } else {
+    //     return <ProjectList projectList={data}></ProjectList>
+    //   }
+
+    return <Wrapper loadstatus={`${loading ? true: false}`} errorstatus={`${error ? true: false}`}></Wrapper>
    
 }
 export default Projects;

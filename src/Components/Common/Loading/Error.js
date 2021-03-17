@@ -1,7 +1,7 @@
 import react from 'react'
 
 
-function Running(){
+function Error({errorMessage}){
     return (
         <div className="container" style={{height: "100vh", alignItems:"center", flexDirection :"column", display:"flex"}}>
             <div className="row">{errorMessage}</div>
@@ -16,4 +16,4 @@ function Running(){
 
     )
 }
-export default Running;
+export default Error;
