@@ -13,7 +13,7 @@ import './CSS/Background.css'
 ReactDOM.render(
   <React.StrictMode>
     <Background className="wrapper"></Background>
-    <App />
+    <App className="App"/>
 
   </React.StrictMode>,
   document.getElementById('root')

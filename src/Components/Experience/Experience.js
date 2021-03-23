@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
   root:{
     paddingLeft:0,
     paddingRight:0,
+  },
+  secondaryDot:{
+    backgroundColor:  "#FF1493"
   }
 }));
 
@@ -43,7 +46,7 @@ return (
         <Typography variant="body2"  style={{color:"#fff"}}>(2018 - Present)</Typography>
       </TimelineOppositeContent>
       <TimelineSeparator>
-        <TimelineDot color="primary"/>
+        <TimelineDot className={classes.secondaryDot}/>
         <TimelineConnector className = {classes.secondaryTail}/>
       </TimelineSeparator>
       <TimelineContent>

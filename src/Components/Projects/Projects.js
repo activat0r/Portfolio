@@ -50,8 +50,14 @@ function Projects(){
       .then(res => res.json())
       .then(
         (result) => {
+          if(result.message!= "Not Found"){
           setLoading(false);
           setData(result);
+        }
+          else{
+            setLoading(false);
+            setError("error");
+          }
         },
         (error) => {
           setLoading(false);
@@ -59,15 +65,15 @@ function Projects(){
         }
       )
     },[])
-    // if (error) {
-    //     return <Error errorMessage={error}></Error>;
-    //   } else if (loading) {
-    //     return <div>Loading...</div>;
-    //   } else {
-    //     return <ProjectList projectList={data}></ProjectList>
-    //   }
+    if (error) {
+        return  <Wrapper loadstatus={`${loading ? true: false}`} errorstatus={`${error ? true: false}`}></Wrapper>
 
-    return <Wrapper loadstatus={`${loading ? true: false}`} errorstatus={`${error ? true: false}`}></Wrapper>
+      } else if (loading) {
+        return <div>Loading...</div>;
+      } else {
+        return <ProjectList projectList={data}></ProjectList>
+      }
+
    
 }
 export default Projects;

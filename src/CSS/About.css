@@ -37,7 +37,6 @@
 }
 
 .about-wrapper{
-    height: "auto";
-    width: "auto";
-
+    flex-grow: 1;
+    flex-shrink: 0;
 }

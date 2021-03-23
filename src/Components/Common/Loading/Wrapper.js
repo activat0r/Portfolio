@@ -24,7 +24,7 @@ useEffect(()=>{
         <div className="container" style={{height: "100vh", alignItems:"center", flexDirection :"column", display:"flex",background:"#efefef"}}>
             <div style={{background:"#efefef",alignItems:"center", flexDirection :"column", display:"flex", width:"100%"}} >
 
-            <button className ="btn btn-outline-secondary" onClick={()=> setSuccess(!success)}>Make it fly</button>
+            <button type="button" className ="btn btn-outline-secondary btn-sm" onClick={()=> setSuccess(!success)}>{`${success ? "Make it fly" : "Bring it back"}`}</button>
 
             <svg  viewBox="0 0 1280 385" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Frame_2">

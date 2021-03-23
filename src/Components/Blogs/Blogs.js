@@ -1,10 +1,10 @@
 import BlogsList from './BlogsList'
 import react from 'react'
-
+import "./../../CSS/Blogs.css"
 function Blogs(){
     return(
-<div>
-    blogs
+<div className="container blogsWrapper">
+    <h2>In Progress</h2>
 </div>
     )
 }
