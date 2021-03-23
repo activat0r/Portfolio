@@ -12,6 +12,12 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.336);
+    flex-direction: column;
+}
+
+.projectHeader{
+    color: rgb(255, 255, 255);
 }
 
 .project-card-height{
@@ -29,10 +35,10 @@
     font-weight: 600;
     right: 25px;
 }
+.ProjectsRow{
 
-.hover-animation:hover .card-hovered:not(:hover){
-    transform: scale(0.95);
-    transition: 0.1s;
+    margin-top: 1em;
+    
 }
 .card-hovered:hover{
     transform: scale(1.05);
