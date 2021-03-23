@@ -71,7 +71,7 @@ function About(){
 
     return(
    
-    <div className="aboutWrapper">
+    <div className="about-wrapper">
       
     <div className="avatar-container">
         <img className="avatar-img" src={photo} alt="Aditya Sawant"/>

@@ -1,0 +1,198 @@
+#raindrops_5{
+    animation-name: falling-drops_5;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes falling-drops_5{
+    0%{
+        opacity: 0.2;
+    }
+    25%{
+        opacity: .7;
+
+    }
+    50%{        opacity: .7;
+
+    }
+    75%{        opacity: .7;
+
+
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(150px);
+        -webkit-transform: translateY(150px);
+    }
+}
+
+
+#raindrops_4{
+    animation-name: falling-drops_4;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes falling-drops_4{
+    0%{
+        opacity: 0.2;
+    }
+    25%{
+        opacity: .7;
+
+    }
+    50%{        opacity: .7;
+
+    }
+    75%{        opacity: .7;
+
+
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(150px);
+        -webkit-transform: translateY(150px);
+    }
+}
+
+
+#raindrops_3{
+    animation-name: falling-drops_3;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes falling-drops_3{
+    0%{
+        opacity: 0.2;
+    }
+    25%{
+        opacity: .7;
+
+    }
+    50%{        opacity: .7;
+
+    }
+    75%{        opacity: .7;
+
+
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(150px);
+        -webkit-transform: translateY(150px);
+    }
+}
+
+
+#raindrops_2{
+    animation-name: falling-drops_2;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes falling-drops_2{
+    0%{
+        opacity: 0.2;
+    }
+    25%{
+      
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.6;
+
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(150px);
+        -webkit-transform: translateY(150px);
+    }
+}
+
+
+#raindrops_1{
+    animation-name: falling-drops_1;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes falling-drops_1{
+    0%{
+        opacity: 0.2;
+    }
+    25%{
+      
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.8;
+
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(150px);
+        -webkit-transform: translateY(150px);
+    }
+}
+
+.network-load-image{
+
+}
+
+.umbrella-fly{
+    animation-name: blowing-umbrella;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    position: relative;
+    animation-timing-function: linear;
+}
+
+.umbrella-invisible{
+    opacity: 0;
+}
+
+@keyframes blowing-umbrella{
+    0%{ 
+        opacity: 1;
+        transform: translateX(0px) translateY(0);
+        -webkit-transform: translateX(0px) translateY(0);
+    }
+    25%{
+      
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.4;
+       
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(-30deg) translateX(-400px) translateY(-40px) scale(0.2);
+        -webkit-transform: rotate(-30deg) translateX(-400px) translateY(-40px)  scale(0.2);
+    }
+}
+
+.rain-drop-position{
+    position: absolute;
+    background-repeat: repeat;
+}
+

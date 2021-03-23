@@ -1,0 +1,8 @@
+.blogsWrapper{
+    background-color: #0000003d;
+    color: #fff;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

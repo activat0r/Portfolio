@@ -1,0 +1,52 @@
+.link-style{
+    color: white;
+}
+.link-style:hover{
+    color: rgb(150, 189, 212);
+}
+.link-style:focus{
+    color: rgb(150, 189, 212)
+}
+
+.vertical-align{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.336);
+    flex-direction: column;
+}
+
+.projectHeader{
+    color: rgb(255, 255, 255);
+}
+
+.project-card-height{
+    min-height: 100%;
+    color: white;
+}
+.project-card-body{
+    position: relative;
+}
+
+.project-card-button{
+    position: absolute;
+    bottom: 10px;
+    color: rgb(13, 68, 68);
+    font-weight: 600;
+    right: 25px;
+}
+.ProjectsRow{
+
+    margin-top: 1em;
+    
+}
+.card-hovered:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+    box-shadow: 0 0 8px #00000044;
+}
+
+.project-card{
+    margin-bottom:5px;
+    margin-top:5px;
+}

@@ -1,7 +1,8 @@
 .App {
   text-align: center;
   -webkit-backface-visibility: hidden;
-
+  display: flex;
+  height: 100vh;
 }
 
 .App-logo {
@@ -37,4 +38,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#root{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
