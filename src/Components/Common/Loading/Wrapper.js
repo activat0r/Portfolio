@@ -21,7 +21,7 @@ useEffect(()=>{
 
 
     return (
-        <div className="container" style={{height: "100vh", alignItems:"center", flexDirection :"column", display:"flex",background:"#efefef"}}>
+        <div className="container" style={{flexGrow:1,alignItems:"center", flexDirection :"column", display:"flex",background:"#efefef"}}>
             <div style={{background:"#efefef",alignItems:"center", flexDirection :"column", display:"flex", width:"100%"}} >
 
             <button type="button" className ="btn btn-outline-secondary btn-sm" onClick={()=> setSuccess(!success)}>{`${success ? "Make it fly" : "Bring it back"}`}</button>
