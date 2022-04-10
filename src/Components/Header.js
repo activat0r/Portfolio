@@ -82,7 +82,7 @@ function Header() {
 
         </li>
         <li className="nav-item" onClick={()=>setActiveId(5)}>
-          <a className="nav-link pdf-icon" target="_blank" href="https://drive.google.com/file/d/1Bv_CCNKiKlt-C9dBxNloM08tQagwLFKo/view?usp=sharing">Resume</a>
+          <a className="nav-link pdf-icon" target="_blank" href="https://drive.google.com/file/d/1041xrm9stnVp5nevrXKwIxHRefu_rTX_/view?usp=sharing">Resume</a>
 
         </li>
       </ul>

@@ -15,6 +15,19 @@ function ProjectList({projectList}){
   <div className="row ProjectsRow">
   <h5 className="projectHeader">Organizational Projects</h5>
 
+
+  <div className="col-sm-12 col-md-4 justify-content-center  project-card">
+    
+     <div className="card project-card-height card-hovered" style={{color: "black"}}>
+       
+       <div className="card-body project-card-body">
+         <h5 className="card-title" >WebEngage Android SDK</h5>
+         <p className="card-text">Native Android SDK to be integrated in the client's application. Has push notification capabilities, In-app dialogs, Events tracking.</p>
+       </div>
+       </div>
+   </div>
+
+
    <div className="col-sm-12 col-md-4 justify-content-center  project-card">
     
      <div className="card project-card-height card-hovered" style={{color: "black"}}>

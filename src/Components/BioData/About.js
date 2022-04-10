@@ -39,7 +39,7 @@ function About(){
     },typeCharDelay)
     return () => window.clearTimeout(timer);
 
-    },[deleting,charCounter,word,keywordCounter,keywords])
+    },)
 
     useEffect(()=>{
         const timer2 = setTimeout(()=>{
@@ -57,7 +57,7 @@ function About(){
         }
     },eraseCharDelay)
     return () => window.clearTimeout(timer2);
-    },[deleting,charCounter,word,keywordCounter,keywords])
+    },)
 
     useEffect(()=>{
         const timer3 = setTimeout(()=>{
@@ -67,11 +67,11 @@ function About(){
            
         },newKeywordDelay)
         return ()=> window.clearTimeout(timer3);
-    },[keywordCounter,keywords,charCounter])
+    },)
 
     return(
    
-    <div className="about-wrapper">
+    <div className="about-wrapper container">
       
     <div className="avatar-container">
         <img className="avatar-img" src={photo} alt="Aditya Sawant"/>
@@ -84,6 +84,12 @@ function About(){
         <h4 id="about_name" className="intro-typer" >
             I am&nbsp;{text}</h4>
       </div> 
+      <div>
+        <h6>I am a developer who started coding at an age of 17. My interest in coding was generated from playing computer games and creating simple mods for the games. Following my interest, i enrolled in engineering to learn more about the computers.
+        I like to design simple yet innovative solutions to tackle the problems faced in daily life to make it simpler.
+        In my free time, I am usually reading tech blogs or novels.</h6>
+
+      </div>
     </div>
 
     );
