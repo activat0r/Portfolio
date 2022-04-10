@@ -41,9 +41,30 @@ return (
     <Container className={classes.root}>
     <Timeline align="alternate" className={classes.root}>
     
+    
     <TimelineItem>
       <TimelineOppositeContent>
-        <Typography variant="body2"  style={{color:"#fff"}}>(2018 - Present)</Typography>
+        <Typography variant="body2"  style={{color:"#fff"}}>(2021 - Present)</Typography>
+      </TimelineOppositeContent>
+      <TimelineSeparator>
+        <TimelineDot className={classes.secondaryDot}/>
+        <TimelineConnector className = {classes.secondaryTail}/>
+      </TimelineSeparator>
+      <TimelineContent>
+      <Paper elevation = {2} className = {classes.paperCurrent}>
+        <div className={classes.div}>
+        <Typography variant="body1">Software Engineer</Typography>
+        <Typography variant="body2" color= "textSecondary" >WebEngage</Typography>
+        </div>
+      </Paper>
+      </TimelineContent>
+    </TimelineItem>
+
+
+
+    <TimelineItem>
+      <TimelineOppositeContent>
+        <Typography variant="body2"  style={{color:"#fff"}}>(2018 - 2021)</Typography>
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot className={classes.secondaryDot}/>
